@@ -1,0 +1,46 @@
+# Ignore Terraform state files (can contain sensitive data)
+*.tfstate
+*.tfstate.*
+
+# Ignore crash logs
+crash.log
+crash.*.log
+
+# Ignore variable files (often contain secrets)
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+
+# Ignore Terraform directories (provider binaries, modules, etc.)
+.terraform/
+**/.terraform/
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore Terraform CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore plan files
+*.plan
+*.tfplan
+
+# Ignore local environment files
+.env
+.envrc
+
+# Ignore private keys (never commit your .pem files)
+*.pem
+private-key/
+
+# Ignore IDE/editor directories
+.vscode/
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
