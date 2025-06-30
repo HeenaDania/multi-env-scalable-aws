@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws-main-account')      // Replace with your Jenkins AWS credential ID
-        AWS_SECRET_ACCESS_KEY = credentials('aws-main-account')      // Replace with your Jenkins AWS credential ID
+        AWS_ACCESS_KEY_ID     = credentials('aws-root-account')      // Replace with your Jenkins AWS credential ID
+        AWS_SECRET_ACCESS_KEY = credentials('aws-root-account')      // Replace with your Jenkins AWS credential ID
         TF_VAR_db_password    = credentials('db-password')           // Replace with your Jenkins DB password credential ID
         AWS_DEFAULT_REGION    = 'us-east-1'
     }
