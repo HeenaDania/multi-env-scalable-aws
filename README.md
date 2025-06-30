@@ -54,8 +54,3 @@ terraform apply -var-file=terraform.tfvars
 ## **Security**
 - Do **not** commit secrets or `.tfstate` files.
 - Use AWS IAM best practices for credentials.
-
----
-
-## **License**
-MIT
