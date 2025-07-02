@@ -4,7 +4,7 @@
 variable "vpc_cidr" {
   description = "CIDR block for VPC"
   type        = string
-  default     = "10.1.0.0/16"
+  default     = "10.2.0.0/16"
 }
 
 variable "environment" {
@@ -49,7 +49,7 @@ resource "aws_subnet" "public" {
   count = 2
 
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = "10.1.${count.index + 1}.0/24"
+  cidr_block              = "10.2.${count.index + 1}.0/24"
   availability_zone       = data.aws_availability_zones.available.names[count.index]
   map_public_ip_on_launch = true
 
@@ -65,7 +65,7 @@ resource "aws_subnet" "private" {
   count = 2
 
   vpc_id            = aws_vpc.main.id
-  cidr_block        = "10.1.${count.index + 10}.0/24"
+  cidr_block        = "10.2.${count.index + 10}.0/24"
   availability_zone = data.aws_availability_zones.available.names[count.index]
 
   tags = {

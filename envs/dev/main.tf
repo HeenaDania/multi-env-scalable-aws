@@ -9,7 +9,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-  
 
   # Remote backend configuration
   backend "s3" {
